@@ -16,7 +16,7 @@ public class MinEditDistance {
     if (firstString == null || firstString.length() == 0) {
       return secondString.length();
     }
-
+    //TODO - check if the first character of the Strings re equal or not
     //System.out.println("First String : "+firstString+" Second String : "+secondString);
     count = count +min(minEditDistance(
         firstString.substring(0, firstString.length() - 1),
