@@ -1,4 +1,4 @@
-package Array;
+package DynamicProgramming;
 
 public class LongestIncreasingSubsequence {
 

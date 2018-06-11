@@ -1,4 +1,4 @@
-package Array.DynamicProgramming;
+package DynamicProgramming;
 
 public class CheckInterleavingString {
 
