@@ -24,7 +24,7 @@ public class SameBinaryTree {
         }else if(nodeFirst==null || nodeSecond==null){
             return false;
         }else if(nodeFirst.data==nodeSecond.data){
-            return checkIfSameBinaryTree(nodeFirst.left,nodeSecond.left) || checkIfSameBinaryTree(nodeFirst.right,nodeSecond.right);
+            return checkIfSameBinaryTree(nodeFirst.left,nodeSecond.left) && checkIfSameBinaryTree(nodeFirst.right,nodeSecond.right);
         }
         return false;
     }
