@@ -40,6 +40,21 @@ public class BinaryTreeCreator {
                 root.right.right = new Node(58);
                 root.right.right.right = new Node(75);
                 root.right.right.right.right = new Node(101);
+                break;
+            case 4:
+                /**
+                 * Mirror tree of the CASE 1
+                 * */
+                root = new Node(40);
+                root.right = new Node(25);
+                root.right.left = new Node(30);
+                root.right.right = new Node(15);
+                root.left = new Node(50);
+                root.left.right = new Node(45);
+                root.left.left = new Node(55);
+                root.left.left.left = new Node(75);
+                root.left.left.left.left = new Node(100);
+                break;
             default:
                 root = null;
         }
