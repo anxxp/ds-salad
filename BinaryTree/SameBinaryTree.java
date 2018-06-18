@@ -3,8 +3,15 @@ package BinaryTree;
 public class SameBinaryTree {
 
     public static void main(String args[]){
+
+        //Same Tree as Input
         Node rootNodeFirst = BinaryTreeCreator.createInputBinaryTree(1);
-        Node rootNodeSecond = BinaryTreeCreator.createInputBinaryTree(3);
+        Node rootNodeSecond = BinaryTreeCreator.createInputBinaryTree(1);
+        System.out.println(checkIfSameBinaryTree(rootNodeFirst,rootNodeSecond));
+
+        //Structurally same but with slight changes in data.
+        rootNodeFirst = BinaryTreeCreator.createInputBinaryTree(1);
+        rootNodeSecond = BinaryTreeCreator.createInputBinaryTree(3);
         System.out.println(checkIfSameBinaryTree(rootNodeFirst,rootNodeSecond));
 
     }
