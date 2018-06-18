@@ -1,6 +1,6 @@
 package BinaryTree;
 
-public class SameBInaryTree {
+public class SameBinaryTree {
 
     public static void main(String args[]){
         Node rootNodeFirst = BinaryTreeCreator.createInputBinaryTree(1);
