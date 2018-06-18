@@ -21,12 +21,25 @@ public class BinaryTreeCreator {
                 root.right.right.right = new Node(75);
                 root.right.right.right.right = new Node(100);
                 break;
-                case 2:
+            case 2:
                 root = new Node(40);
                 root.right = new Node(50);
                 root.right.right = new Node(55);
                 root.right.right.right = new Node(75);
                 break;
+            case 3:
+                /**
+                 * Similar structure to CASE 1 , but some values are different.
+                 */
+                root = new Node(40);
+                root.left = new Node(25);
+                root.left.right = new Node(30);
+                root.left.left = new Node(15);
+                root.right = new Node(50);
+                root.right.left = new Node(45);
+                root.right.right = new Node(58);
+                root.right.right.right = new Node(75);
+                root.right.right.right.right = new Node(101);
             default:
                 root = null;
         }
