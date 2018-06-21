@@ -2,7 +2,7 @@ package BinaryTree;
 
 public class HeightOfBinaryTree {
     public static void main(String args[]){
-        Node root = BinaryTreeCreator.createInputBinaryTree(1);
+        Node root = BinaryTreeHelper.createInputBinaryTree(1);
         System.out.println(heightOfBinaryTree(root));
 
     }

@@ -1,6 +1,9 @@
 package BinaryTree;
 
-public class BinaryTreeCreator {
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BinaryTreeHelper {
 
 
     public static Node createInputBinaryTree(int type){
@@ -61,5 +64,71 @@ public class BinaryTreeCreator {
 
         return root;
 
+    }
+
+    public static void prettyPrintTree(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        int[] size = new int[1];
+        size[0] = 0;
+        int height = height(root, size) - 1;
+        int total = 2 * (int) Math.pow(2, height) - 1;
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.offer(root);
+
+        for (int i = 0; i <= height; i++) {
+            int front = (int) (Math.pow(2, (height - i))) - 1;
+            int num = (int) (Math.pow(2, i));
+            int interval = num > 1 ? (total - front * 2 - num) / (num - 1) : 0;
+
+            for (int j = 0; j < num; j++) {
+                Node peek = queue.poll();
+
+                if (j == 0) {
+                    print(front, size, peek);
+                } else {
+                    print(interval, size, peek);
+                }
+
+                if (peek == null) {
+                    queue.offer(null);
+                    queue.offer(null);
+                } else {
+                    queue.offer(peek.left);
+                    queue.offer(peek.right);
+                }
+            }
+
+            System.out.println();
+        }
+    }
+
+    public static int height(Node root, int[] size) {
+        if (root == null) {
+            return 0;
+        }
+
+        size[0] = Math.max(size[0], Integer.toString(root.data).length());
+        return Math.max(height(root.left, size), height(root.right, size)) + 1;
+    }
+
+    public static void print(int count, int[] size, Node root) {
+        for (int i = 0; i < count * size[0]; i++) {
+            System.out.print(" ");
+        }
+
+        if (root != null) {
+            for (int j = 0; j < size[0] - Integer.toString(root.data).length(); j++) {
+                System.out.print(" ");
+            }
+
+            System.out.print(root.data);
+        } else {
+            for (int j = 0; j < size[0]; j++) {
+                System.out.print(" ");
+            }
+        }
     }
 }

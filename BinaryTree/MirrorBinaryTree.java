@@ -4,8 +4,8 @@ public class MirrorBinaryTree {
 
     public static void main(String args[]){
 
-        Node rootFirst = BinaryTreeCreator.createInputBinaryTree(1);
-        Node rootSecond = BinaryTreeCreator.createInputBinaryTree(4);
+        Node rootFirst = BinaryTreeHelper.createInputBinaryTree(1);
+        Node rootSecond = BinaryTreeHelper.createInputBinaryTree(4);
 
         System.out.println(checkIfMirrorBinaryTree(rootFirst,rootSecond));
 

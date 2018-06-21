@@ -19,7 +19,7 @@ public class LowestCommonAncestorFoolProof {
         hasFirstNum = false;
         hasSecNum = false;
 
-        Node root = BinaryTreeCreator.createInputBinaryTree(1);
+        Node root = BinaryTreeHelper.createInputBinaryTree(1);
 
         int firstNum = 50;
         int secondNum =100;

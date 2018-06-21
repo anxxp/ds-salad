@@ -4,7 +4,7 @@ public class AncestorsOfNode {
 
     public static void main(String args[]){
         //Input data
-        Node root = BinaryTreeCreator.createInputBinaryTree(1);
+        Node root = BinaryTreeHelper.createInputBinaryTree(1);
         int num = 40;
 
         /**

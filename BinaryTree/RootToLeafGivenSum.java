@@ -5,7 +5,7 @@ public class RootToLeafGivenSum {
     public static void main(String args[]){
 
         //Input
-        Node root = BinaryTreeCreator.createInputBinaryTree(1);
+        Node root = BinaryTreeHelper.createInputBinaryTree(1);
         int sum = 135;
 
         rootToLeafGivenSum(root,sum);
