@@ -5,13 +5,13 @@ public class SameBinaryTree {
     public static void main(String args[]){
 
         //Same Tree as Input
-        Node rootNodeFirst = BinaryTreeHelper.createInputBinaryTree(1);
-        Node rootNodeSecond = BinaryTreeHelper.createInputBinaryTree(1);
+        Node rootNodeFirst = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
+        Node rootNodeSecond = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
         System.out.println(checkIfSameBinaryTree(rootNodeFirst,rootNodeSecond));
 
         //Structurally same but with slight changes in data.
-        rootNodeFirst = BinaryTreeHelper.createInputBinaryTree(1);
-        rootNodeSecond = BinaryTreeHelper.createInputBinaryTree(3);
+        rootNodeFirst = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
+        rootNodeSecond = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST_ISOMORPH);
         System.out.println(checkIfSameBinaryTree(rootNodeFirst,rootNodeSecond));
 
     }

@@ -5,15 +5,14 @@ import java.util.Queue;
 
 public class BinaryTreeHelper {
 
-
-    public static Node createInputBinaryTree(int type){
+    public static Node createInputBinaryTree(TreeType type){
         Node root;
 
         switch(type){
-            case 0:
+            case EMPTY_TREE:
                 root = new Node(40);
                 break;
-            case 1:
+            case STANDARD_BST:
                 root = new Node(40);
                 root.left = new Node(25);
                 root.left.right = new Node(30);
@@ -24,13 +23,13 @@ public class BinaryTreeHelper {
                 root.right.right.right = new Node(75);
                 root.right.right.right.right = new Node(100);
                 break;
-            case 2:
+            case RIGHT_SKEWED_BST:
                 root = new Node(40);
                 root.right = new Node(50);
                 root.right.right = new Node(55);
                 root.right.right.right = new Node(75);
                 break;
-            case 3:
+            case STANDARD_BST_ISOMORPH:
                 /**
                  * Similar structure to CASE 1 , but some values are different.
                  */
@@ -44,7 +43,7 @@ public class BinaryTreeHelper {
                 root.right.right.right = new Node(75);
                 root.right.right.right.right = new Node(101);
                 break;
-            case 4:
+            case STANDARD_BST_MIRROR:
                 /**
                  * Mirror tree of the CASE 1
                  * */
@@ -58,7 +57,7 @@ public class BinaryTreeHelper {
                 root.left.left.left = new Node(75);
                 root.left.left.left.left = new Node(100);
                 break;
-            case 5:
+            case BINARY_TREE:
                 /**
                  * Not a Binary Search Tree
                  * */

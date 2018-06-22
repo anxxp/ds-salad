@@ -15,7 +15,7 @@ package BinaryTree;
 public class LowestCommonAncestor {
 
     public static void main(String a[]){
-        Node root = BinaryTreeHelper.createInputBinaryTree(1);
+        Node root = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
         BinaryTreeHelper.prettyPrintTree(root);
         System.out.println("\n");
         System.out.println(lowestCommonAncestor(root,45,100).data);

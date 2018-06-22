@@ -3,10 +3,10 @@ package BinaryTree;
 public class CheckIsBinarySearchTree {
 
     public static void main(String args[]){
-        Node rootBST = BinaryTreeHelper.createInputBinaryTree(1);
+        Node rootBST = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
         checkIsBinarySearchTree(rootBST);
 
-        Node rootNotBST = BinaryTreeHelper.createInputBinaryTree(5);
+        Node rootNotBST = BinaryTreeHelper.createInputBinaryTree(TreeType.BINARY_TREE);
         checkIsBinarySearchTree(rootNotBST);
     }
 

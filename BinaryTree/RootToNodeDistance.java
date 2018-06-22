@@ -4,7 +4,7 @@ public class RootToNodeDistance {
 
     public static void main(String args[]){
 
-        Node root = BinaryTreeHelper.createInputBinaryTree(1);
+        Node root = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
         int num = 55;
 
         System.out.println(rootToNodeDistance(root,num));

@@ -4,7 +4,7 @@ public class DistanceBetweenTwoNodes {
 
     public static void main(String args[]){
 
-        Node root = BinaryTreeHelper.createInputBinaryTree(1);
+        Node root = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
         int firstNum  =  25;
         int secondNum = 55;
 
