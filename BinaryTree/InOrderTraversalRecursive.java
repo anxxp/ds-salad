@@ -4,17 +4,17 @@ public class InOrderTraversalRecursive {
 
     public static void main(String args[]){
         Node root = BinaryTreeHelper.createInputBinaryTree(TreeType.STANDARD_BST);
-        inOrderTravesalRecursive(root);
+        inOrderTraversalRecursive(root);
     }
 
-    public static void inOrderTravesalRecursive(Node node){
+    public static void inOrderTraversalRecursive(Node node){
 
         if(node == null){
             return;
         }
 
-        inOrderTravesalRecursive(node.left);
+        inOrderTraversalRecursive(node.left);
         System.out.print(" "+node.data);
-        inOrderTravesalRecursive(node.right);
+        inOrderTraversalRecursive(node.right);
     }
 }
