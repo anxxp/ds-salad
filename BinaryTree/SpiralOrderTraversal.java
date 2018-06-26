@@ -25,7 +25,6 @@ public class SpiralOrderTraversal {
         }
         while(!oddStack.isEmpty() || !evenStack.isEmpty()){
 
-            if(!oddStack.isEmpty()){
                 while(!oddStack.isEmpty()){
                     currentNode = oddStack.pop();
                     System.out.print(currentNode.data+" ");
@@ -36,9 +35,7 @@ public class SpiralOrderTraversal {
                         evenStack.push(currentNode.right);
                     }
                 }
-            }
 
-            if(!evenStack.isEmpty()){
                 while(!evenStack.isEmpty()){
                     currentNode = evenStack.pop();
                     System.out.print(currentNode.data+" ");
@@ -49,8 +46,6 @@ public class SpiralOrderTraversal {
                         oddStack.push(currentNode.left);
                     }
                 }
-
-            }
         }
     }
 }
