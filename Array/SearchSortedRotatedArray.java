@@ -6,7 +6,7 @@ package Array;
  *
  * SOLUTION :
  *
- * A[START] <<< sorted ascending << A[X] GREATER THAN A[X+1] << sorted ascending order<< A[END]
+ * Array[START] <<< sorted ascending << Array[X] GREATER THAN Array[X+1] << sorted ascending order<< Array[END]
  * In this case X+1 is the infection point.
  *
  * If MID-POINT <= X , then left part is sorted i-e Array[START] to Array[MID-POINT]
