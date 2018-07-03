@@ -35,8 +35,10 @@ public class InOrderTraversalMorris {
             }else{
                 /**
                  * If the current node has a left child , then before navigating
-                 * to the right child we first find the in-order predecessor of the
-                 * current node.
+                 * to the left child we first find the in-order predecessor of the
+                 * current node.This would help us come back to the current node when the left
+                 * sub-tree is traversed. We are actually establishing a link between current node and
+                 * the last element in the left-sub tree that will be traversed .
                  * */
                 inOrderPredecessor = currentNode.left;
 
