@@ -1,7 +1,7 @@
 package Array;
 
 /**
- * This problem is also knows as Zig-zag array
+ * This problem is also known as Zig-zag array
  *
  * PROBLEM :
  *
@@ -27,8 +27,13 @@ public class SortIntoAlternatePeaksAndValleys {
     public static void main(String args[]){
 
         int[] input = {5,7,9,6,2,11,8,1};
+        System.out.print("INPUT : ");
+        for (int num : input){
+            System.out.print(num+" ");
+        }
+        System.out.println();
         sortIntoAlternatePeaksAndValleys(input);
-
+        System.out.print("OUTPUT : ");
         for (int num : input){
             System.out.print(num+" ");
         }
