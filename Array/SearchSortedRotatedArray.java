@@ -6,9 +6,9 @@ package Array;
  *
  * SOLUTION :
  *
- * Array[START] <<< sorted ascending << Array[X] GREATER THAN Array[X+1] << sorted ascending order<< Array[END]
- * In this case X+1 is the infection point.
- *
+ * { Array[START] <<< elements in sorted ascending order << Array[X] } GREATER THAN { Array[X+1] << elements in sorted ascending order << Array[END] }
+ * In this case X+1 is the infection point because Array[X] > Array[X+1].
+ * This means the Array has two sorted sub-arrays.
  * If MID-POINT <= X , then left part is sorted i-e Array[START] to Array[MID-POINT]
  * Else If MID-POINT >= X+1 , then right part is sorted i-e Array[MID-POINT] to Array[END]
  *
