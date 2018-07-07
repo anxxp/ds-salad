@@ -59,9 +59,9 @@ public class SortIntoAlternatePeaksAndValleys {
         }
     }
 
-    private static void swap(int[] input, int i, int i1) {
+    private static void swap(int[] input, int i, int j) {
         int temp = input[i];
-        input[i] = input[i+1];
+        input[i] = input[j];
         input[i+1] = temp;
     }
 }
