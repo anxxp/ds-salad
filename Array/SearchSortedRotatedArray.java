@@ -21,8 +21,12 @@ public class SearchSortedRotatedArray {
 
     public static void main(String args[]){
         int[] inputArray = {48,55,60,10,15,18,25,35,40};
+        ArrayUtility.printArray("INPUT ARRAY",inputArray);
+
         int num =10;
-        System.out.println(searchSortedRotatedArray(inputArray,num));
+        System.out.println("NUMBER : "+num);
+
+        System.out.println("INDEX : "+searchSortedRotatedArray(inputArray,num));
     }
 
     public static int searchSortedRotatedArray(int[] input,int num){

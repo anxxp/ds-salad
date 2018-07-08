@@ -4,16 +4,11 @@ public class MoveZerosToEnd {
 
     public static void main(String ags[]){
         int[] input = {1,0,2,5,0,0,7,5,0,8,4};
-        System.out.print("INPUT : ");
-        for (int num : input){
-            System.out.print(num+" ");
-        }
-        System.out.println();
+        ArrayUtility.printArray("INPUT",input);
+
         moveZerosToEnd(input);
-        System.out.print("OUTPUT : ");
-        for (int num : input){
-            System.out.print(num+" ");
-        }
+
+        ArrayUtility.printArray("OUTPUT",input);
     }
 
     public static void moveZerosToEnd(int[] input){
@@ -27,7 +22,7 @@ public class MoveZerosToEnd {
 
             if(input[currentIndex] == 0){
 
-                swap(input,currentIndex,lastIndexForZero);
+                ArrayUtility.swap(input,currentIndex,lastIndexForZero);
 
                 while(input[lastIndexForZero] == 0){
                     lastIndexForZero--;
@@ -37,9 +32,5 @@ public class MoveZerosToEnd {
         }
     }
 
-    private static void swap(int[] input, int i, int j) {
-        int temp = input[i];
-        input[i] = input[j];
-        input[j] = temp;
-    }
+
 }

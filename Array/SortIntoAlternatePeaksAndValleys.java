@@ -27,16 +27,11 @@ public class SortIntoAlternatePeaksAndValleys {
     public static void main(String args[]){
 
         int[] input = {5,7,9,6,2,11,8,1};
-        System.out.print("INPUT : ");
-        for (int num : input){
-            System.out.print(num+" ");
-        }
-        System.out.println();
+        ArrayUtility.printArray("INPUT",input);
+
         sortIntoAlternatePeaksAndValleys(input);
-        System.out.print("OUTPUT : ");
-        for (int num : input){
-            System.out.print(num+" ");
-        }
+
+        ArrayUtility.printArray("OUTPUT",input);
     }
 
     public static void sortIntoAlternatePeaksAndValleys(int[] input){
@@ -47,11 +42,11 @@ public class SortIntoAlternatePeaksAndValleys {
 
             if(flipFlop){
                 if(input[i]>input[i+1]){
-                    swap(input,i,i+1);
+                    ArrayUtility.swap(input,i,i+1);
                 }
             }else{
                 if(input[i]<input[i+1]){
-                    swap(input,i,i+1);
+                    ArrayUtility.swap(input,i,i+1);
                 }
             }
 
@@ -59,11 +54,7 @@ public class SortIntoAlternatePeaksAndValleys {
         }
     }
 
-    private static void swap(int[] input, int i, int j) {
-        int temp = input[i];
-        input[i] = input[j];
-        input[i+1] = temp;
-    }
+
 }
 
 
