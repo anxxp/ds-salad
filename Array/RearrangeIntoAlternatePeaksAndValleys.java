@@ -22,19 +22,19 @@ package Array;
  *
  * If any of the case gives FALSE we SWAP the CURRENT with the NEXT element.
  * */
-public class SortIntoAlternatePeaksAndValleys {
+public class RearrangeIntoAlternatePeaksAndValleys {
 
     public static void main(String args[]){
 
         int[] input = {5,7,9,6,2,11,8,1};
         ArrayUtility.printArray("INPUT",input);
 
-        sortIntoAlternatePeaksAndValleys(input);
+        rearrangeIntoAlternatePeaksAndValleys(input);
 
         ArrayUtility.printArray("OUTPUT",input);
     }
 
-    public static void sortIntoAlternatePeaksAndValleys(int[] input){
+    public static void rearrangeIntoAlternatePeaksAndValleys(int[] input){
 
         boolean flipFlop = true;
         int lastIndex = input.length-1;
