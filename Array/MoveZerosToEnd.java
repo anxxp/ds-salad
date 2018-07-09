@@ -15,6 +15,9 @@ package Array;
  *
  *  This we continue till
  *    currentIndex < nextIndexToSwapZero  , is TRUE
+ *    When the above condition is FALSE, then all
+ *    the elements from that index to the END of the
+ *    array are all ZEROS. So no need to further iterate.
  *
  * */
 public class MoveZerosToEnd {
