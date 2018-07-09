@@ -53,6 +53,9 @@ public class RearrangeAlternatePositiveNegative {
              * at this index with a POSITIVE number.
              * We search for a POSITIVE number in the rest of the array.
              * Once found we RIGHT-ROTATE the elements between these indices.
+             *
+             * NOTE : We RIGHT-ROTATE only if indexOfNextPositiveNum is a valid index.
+             *      i-e its withing the bound of the array
              * */
             if(isEvenPosition && input[current] < 0 ){
                 int indexOfNextPositiveNum =current + 1;
@@ -75,7 +78,8 @@ public class RearrangeAlternatePositiveNegative {
              * We search for a NEGATIVE number in the rest of the array.
              * Once found we RIGHT-ROTATE the elements between these indices.
              *
-             * NOTE : We RIGHT-ROTATE only if j
+             * NOTE : We RIGHT-ROTATE only if indexOfNextNegativeNum is a valid index.
+             *      i-e its withing the bound of the array
              * */
             if(!isEvenPosition && input[current] >= 0 ){
                 int indexOfNextNegativeNum =current+1;
