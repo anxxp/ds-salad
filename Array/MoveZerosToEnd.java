@@ -13,19 +13,19 @@ public class MoveZerosToEnd {
 
     public static void moveZerosToEnd(int[] input){
 
-        int lastIndexForZero=input.length-1;
+        int nextIndexToSwapZero=input.length-1;
         int currentIndex=0;
-        while(input[lastIndexForZero] ==0 ){
-            lastIndexForZero--;
+        while(input[nextIndexToSwapZero] ==0 ){
+            nextIndexToSwapZero--;
         }
-        while(lastIndexForZero > currentIndex){
+        while(nextIndexToSwapZero > currentIndex){
 
             if(input[currentIndex] == 0){
 
-                ArrayUtility.swap(input,currentIndex,lastIndexForZero);
+                ArrayUtility.swap(input,currentIndex,nextIndexToSwapZero);
 
-                while(input[lastIndexForZero] == 0){
-                    lastIndexForZero--;
+                while(input[nextIndexToSwapZero] == 0){
+                    nextIndexToSwapZero--;
                 }
             }
             currentIndex++;
