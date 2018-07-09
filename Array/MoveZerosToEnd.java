@@ -1,5 +1,22 @@
 package Array;
-
+/**
+ * PROBLEM :
+ * Given an array, we need to move all 0s if any to the right
+ * end of the array.
+ *
+ * SOLUTION :
+ *  We find the last index from the END with a NON-ZERO element.
+ *  This index will be used to SWAP elements with the index
+ *  of the FIRST ZERO we find from the START while iterating
+ *  over the array.
+ *  Once we SWAP the elements in the above indices, we mark
+ *  the immediate LEFT index of the element with ZERO as the next eligible
+ *  index to store the newly found ZERO if any.
+ *
+ *  This we continue till
+ *    currentIndex < nextIndexToSwapZero  , is TRUE
+ *
+ * */
 public class MoveZerosToEnd {
 
     public static void main(String ags[]){
@@ -18,7 +35,7 @@ public class MoveZerosToEnd {
         while(input[nextIndexToSwapZero] ==0 ){
             nextIndexToSwapZero--;
         }
-        while(nextIndexToSwapZero > currentIndex){
+        while(currentIndex < nextIndexToSwapZero ){
 
             if(input[currentIndex] == 0){
 
