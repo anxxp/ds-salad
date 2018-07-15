@@ -8,6 +8,12 @@ public class ArrayUtility {
         input[j] = temp;
     }
 
+    public static void swap(char[] input, int i, int j) {
+        char temp = input[i];
+        input[i] = input[j];
+        input[j] = temp;
+    }
+
     public static void printArray(String prefix,int[] input){
         System.out.print(prefix+" : ");
 
