@@ -66,7 +66,7 @@ public class StringPermutations {
          * one by one at startIndex. We then permute the remaining elements on the right.
          *
          * NOTE :
-         * We swap back the elements at then end of each iteration to restore the
+         * We swap back the elements at the end of each iteration to restore the
          * previous state.
          *
          * */
