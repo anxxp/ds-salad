@@ -61,6 +61,16 @@ public class StringPermutations {
             System.out.println(input);
         }
 
+        /**
+         * We will fix all elements to the right of startIndex including startIndex
+         * one by one at startIndex. We then permute the remaining elements on the right.
+         *
+         * NOTE :
+         * We swap back the elements at then end of each iteration to restore the
+         * previous state.
+         *
+         * */
+
         for(int i=startIndex;i<=lastIndex;i++){
             swap(input,startIndex,i);
             permute(startIndex+1,input,lastIndex);
