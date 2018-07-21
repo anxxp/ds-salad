@@ -35,8 +35,12 @@ public class NQueenProblem {
          * row index in the (N x N) matrix.Then we print the colList and return.
          * */
         if(currentRow==num){
-            ArrayUtility.printArray("",colList);
-            return;
+
+             for(int i=0;i<num;i++){
+                 System.out.print("( "+i+","+colList[i]+" ) ");
+             }
+             System.out.println();
+             return;
         }
         /**
          * We will check the eligibility of each column in the current row (currentRow)
