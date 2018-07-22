@@ -7,18 +7,18 @@ public class MaxBinaryNumber {
     public static void main(String args[]){
 
         int[][] input = new int[][]{
-                { 0, 0, 1, 0},
-                { 0, 0, 1, 0},
-                { 0, 0, 1, 0},
-                { 0, 0, 1, 1},
-                { 0, 0, 1, 0}
+                { 0, 0, 1, 1, 0, 0},
+                { 0, 0, 1, 0, 0, 0},
+                { 0, 0, 1, 0, 1, 0},
+                { 0, 0, 1, 1, 1, 0},
+                { 0, 0, 1, 0, 1, 0}
         };
         System.out.println(indexOfMaxBinaryNum(input));
     }
 
     private static int indexOfMaxBinaryNum(int[][] input) {
-        int numberOfRows = 5;
-        int numberOfCols = 4;
+        int numberOfRows = input.length;
+        int numberOfCols = input[0].length;
         /**
          * Array to keep track of indices
          * */
