@@ -55,13 +55,13 @@ public class MaxBinaryNumber {
             }
         }
 
-        int smalletIndex = array[0];
+        int smallestIndex = array[0];
         for(int i =0;i<lastIndexOfOne;i++){
-            if(array[i]<smalletIndex){
-                smalletIndex = array[i];
+            if(array[i]<smallestIndex){
+                smallestIndex = array[i];
             }
         }
-        return smalletIndex;
+        return smallestIndex;
     }
 
     private static int groupAllOnes(int[][] input, int[] array, int lastIndexOfOne , int col) {
