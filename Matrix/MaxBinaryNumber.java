@@ -32,7 +32,7 @@ public class MaxBinaryNumber {
          * Index of the last 1
          * */
         int firstValidColumn =0;
-        for (int i = firstValidColumn; i < numberOfCols; i++) {
+        for (int i = 0; i < numberOfCols; i++) {
 
             while (lastIndexOfOne>=0 && input[lastIndexOfOne][i] <= 0) {
                 lastIndexOfOne--;
@@ -41,11 +41,11 @@ public class MaxBinaryNumber {
             if (lastIndexOfOne >= 0) {
                 break;
             }else{
-                lastIndexOfOne = numberOfCols-1;
+                lastIndexOfOne = numberOfRows-1;
+                firstValidColumn++;
             }
         }
 
-        firstValidColumn++;
         int prev;
         for (int col=firstValidColumn;col<numberOfCols;col++){
             prev = lastIndexOfOne;
