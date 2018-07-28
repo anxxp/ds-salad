@@ -1,5 +1,17 @@
 package LinkedList;
 /**
+ * 1.PREV        CURRENT     NEXT
+ * 2.            PREV        CURRENT     NEXT
+*  3.                        PREV        CURRENT     NEXT
+ * 4.                                    PREV        CURRENT    NEXT
+ *   HEADER------> 1 -------> 2 --------> 3 ------> 4 --------> NULL
+ *
+ * We start with
+ *      PREV    = NULL
+ *      CURRENT = HEADER
+ *      NEXT    = CURRENT.NEXT
+ *
+ * Then, in each iteration we reverse the link.
  *
  * */
 public class ReverseLinkedList {
