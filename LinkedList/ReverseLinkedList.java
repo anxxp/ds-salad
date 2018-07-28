@@ -1,11 +1,13 @@
 package LinkedList;
-
+/**
+ *
+ * */
 public class ReverseLinkedList {
     public static void main(String args[]){
         SLLNode header = LinkedListHelper.createSinglyLinkedList(LinkedListType.RANDOM_EVEN_LENGTH);
         LinkedListHelper.printLinkedList("INPUT",header);
-        LinkedListHelper.printLinkedList("OUTPUT",header);
         header = reverseLinkedList(header);
+        LinkedListHelper.printLinkedList("OUTPUT",header);
     }
 
     private static SLLNode reverseLinkedList(SLLNode header) {
