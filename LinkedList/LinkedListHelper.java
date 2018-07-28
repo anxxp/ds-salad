@@ -32,7 +32,8 @@ public class LinkedListHelper {
         return head;
     }
 
-    public static void printLinkedList(SLLNode header){
+    public static void printLinkedList(String prefix ,SLLNode header){
+        System.out.println("\n"+prefix);
         SLLNode temp = header;
         while(temp!=null){
             System.out.print(temp.data+" ");
