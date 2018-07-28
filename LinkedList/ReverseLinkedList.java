@@ -4,7 +4,8 @@ package LinkedList;
  * 2.            PREV        CURRENT     NEXT
 *  3.                        PREV        CURRENT     NEXT
  * 4.                                    PREV        CURRENT    NEXT
- *   HEADER------> 1 -------> 2 --------> 3 ------> 4 --------> NULL
+ * 5.                                                PREV        CURRENT    NEXT
+ *   HEADER------> 1 -------> 2 --------> 3 -------> 4 --------> NULL
  *
  * We start with
  *      PREV    = NULL
@@ -13,6 +14,8 @@ package LinkedList;
  *
  * Then, in each iteration we reverse the link.
  *
+ * Finally we PREVIOUS NODE as the HEADER as it refers the
+ * last node in the initial linked list
  * */
 public class ReverseLinkedList {
     public static void main(String args[]){
