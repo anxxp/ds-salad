@@ -40,4 +40,13 @@ public class LinkedListHelper {
             temp = temp.next;
         }
     }
+
+    public static void printLinkedList(String prefix ,DLLNode header){
+        System.out.println("\n"+prefix);
+        DLLNode temp = header;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+    }
 }
