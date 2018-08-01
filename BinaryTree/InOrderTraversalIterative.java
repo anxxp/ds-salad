@@ -19,12 +19,9 @@ public class InOrderTraversalIterative {
     public static void inOrderTraversalIterative(Node root){
 
         Node currentNode = root;
-        if(currentNode == null){
-            return;
-        }
-
         Stack<Node> stack = new Stack<>();
-        while(true){
+
+        while(! stack.isEmpty() || currentNode != null){
 
             if(currentNode != null){
 
@@ -32,9 +29,7 @@ public class InOrderTraversalIterative {
                 currentNode = currentNode.left;
 
             }else{
-                if(stack.isEmpty()){
-                    break;
-                }
+
                 currentNode = stack.pop();
                 System.out.print(" "+currentNode.data);
                 currentNode = currentNode.right;
