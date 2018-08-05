@@ -3,8 +3,6 @@ package BinaryTree;
 import LinkedList.DLLNode;
 import LinkedList.LinkedListHelper;
 
-import java.util.Stack;
-
 public class VerticalSum {
 
     public static void main(String args[]) {
