@@ -71,6 +71,28 @@ public class BinaryTreeHelper {
                 root.right.right.right = new Node(75);
                 root.right.right.right.right = new Node(100);
                 break;
+            case STANDARD_BST_TWO_NODES_SWAPPED:
+                root = new Node(40);
+                root.left = new Node(50);
+                root.left.right = new Node(30);
+                root.left.left = new Node(15);
+                root.right = new Node(20);
+                root.right.left = new Node(45);
+                root.right.right = new Node(55);
+                root.right.right.right = new Node(75);
+                root.right.right.right.right = new Node(100);
+                break;
+            case STANDARD_BST_TWO_ADJ_NODES_SWAPPED:
+                root = new Node(40);
+                root.left = new Node(25);
+                root.left.right = new Node(30);
+                root.left.left = new Node(15);
+                root.right = new Node(50);
+                root.right.left = new Node(45);
+                root.right.right = new Node(75);
+                root.right.right.right = new Node(55);
+                root.right.right.right.right = new Node(100);
+                break;
             default:
                 root = null;
         }
