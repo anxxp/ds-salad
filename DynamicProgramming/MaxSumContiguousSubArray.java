@@ -1,6 +1,5 @@
 package DynamicProgramming;
 
-import java.sql.SQLOutput;
 
 /** We would be using the Kadane's Algorithm for this.
  * This algorithm will work only when we have at-least one positive number
