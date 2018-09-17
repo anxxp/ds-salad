@@ -36,7 +36,6 @@ public class MinEditDistance {
             return firstStrLen;
         }
 
-        int minEditDistance = 0;
         int editDistance[][] = new int[firstStrLen +1][secondStrLen +1];
 
         /**
