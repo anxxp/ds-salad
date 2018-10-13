@@ -23,7 +23,7 @@ public class SearchSortedRotatedArray {
         int[] inputArray = {48,55,60,10,15,18,25,35,40};
         ArrayUtility.printArray("INPUT ARRAY",inputArray);
 
-        int num =10;
+        int num =35;
         System.out.println("NUMBER : "+num);
 
         System.out.println("INDEX : "+searchSortedRotatedArray(inputArray,num));

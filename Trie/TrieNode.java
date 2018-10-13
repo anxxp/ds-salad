@@ -2,8 +2,8 @@ package Trie;
 
 public class TrieNode {
 
-    boolean isWord;
-    TrieNode[] key;
+    public boolean isWord;
+    public TrieNode[] key;
 
     public TrieNode() {
 

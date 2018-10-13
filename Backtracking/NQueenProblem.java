@@ -40,6 +40,7 @@ public class NQueenProblem {
              }
              System.out.println();
              return;
+
         }
         /**
          * We will check the eligibility of each column in the current row (currentRow)

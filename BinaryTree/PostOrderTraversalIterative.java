@@ -1,5 +1,7 @@
 package BinaryTree;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class PostOrderTraversalIterative {
@@ -19,6 +21,7 @@ public class PostOrderTraversalIterative {
         Stack<Node> stack = new Stack<>();
         Node currentNode = root;
         Node temp;
+
 
         while(currentNode != null || !stack.isEmpty()){
 

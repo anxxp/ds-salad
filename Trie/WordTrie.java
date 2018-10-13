@@ -68,4 +68,28 @@ public class WordTrie {
         }
         return currentNode!=null?currentNode.isWord:false;
     }
+
+    public TrieNode getTrieNodeIfValidWord(String word){
+
+        char[] wordChar = word.toCharArray();
+        TrieNode currentNode = root;
+
+        int i=0;
+        int index;
+        /**
+         * We navigate through the TRIE till we have characters in the WORD.
+         * During the traversal if we encounter NULL then there is no point in
+         * iterating over the remaining characters of the word.
+         *
+         * When we are done with the WHILE loop, the if currentNode is :
+         *  NULL -> The word is not found
+         *  NOT NULL -> Then w have to check the isWord flag
+         *
+         * */
+        while(currentNode!=null && i < wordChar.length){
+            index = wordChar[i++] - 'a';
+            currentNode = currentNode.key[index];
+        }
+        return currentNode;
+    }
 }

@@ -10,7 +10,7 @@ public class MaxSumContiguousSubArray {
     //int[] array = {1, -9, -3, 4};
     int[] array = {1, -3, 2,1,-1};
 
-      System.out.println(" has maximum sum for a contigous subarray : "+maxSumSubArray(array));
+      System.out.println(" has maximum sum for a contiguous sub-array : "+maxSumSubArray(array));
   }
 
   public static int maxSumSubArray(int[] array) {

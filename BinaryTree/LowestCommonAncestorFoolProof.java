@@ -1,4 +1,8 @@
 package BinaryTree;
+
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * In LowestCommonAncestor.java , we had a problem.
  * We did not consider the case when one of the element is not present in the Tree.
@@ -15,6 +19,7 @@ public class LowestCommonAncestorFoolProof {
     public static boolean hasSecNum;
 
     public static void main(String a[]){
+
 
         hasFirstNum = false;
         hasSecNum = false;

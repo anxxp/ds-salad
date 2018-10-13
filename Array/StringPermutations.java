@@ -47,7 +47,7 @@ public class StringPermutations {
 
     public static void main(String args[]){
 
-        String input = "123";
+        String input = "11";
         permute(input);
     }
 
