@@ -7,7 +7,8 @@ package Misc;
  compute how much water it is able to trap after
  raining.
 
-    ^
+
+ ^
  13	|
  12	|	 11
  11	|	HHH
@@ -20,12 +21,13 @@ package Misc;
  4	|	HHHHHHHHH---HHHHHH-3-HHH
  3	|	HHHHHHHHH 2 HHHHHHHHHHHH 2
  2	|	HHHHHHHHHHHHHHHHHHHHHHHHHHH 1
- 1	|_0_HHHHHHHHHHHHHHHHHHHHHHHHHHHHH_0_
-     ---------------------------------------->
+ 1  |_0_HHHHHHHHHHHHHHHHHHHHHHHHHHHHH_0_
+    ---------------------------------------->
+
  The above elevation map is represented by
  array [0,11,6,8,2,9,5,3,7,2,1,0].
 
- Water is represented by hyphen.
+Trapped Rain Water is represented by hyphen above.
 
 */
 
