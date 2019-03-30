@@ -8,7 +8,8 @@ package Misc;
  raining.
 
 
- ^
+
+    ^
  13	|
  12	|	 11
  11	|	HHH
@@ -21,7 +22,7 @@ package Misc;
  4	|	HHHHHHHHH---HHHHHH-3-HHH
  3	|	HHHHHHHHH 2 HHHHHHHHHHHH 2
  2	|	HHHHHHHHHHHHHHHHHHHHHHHHHHH 1
- 1  |_0_HHHHHHHHHHHHHHHHHHHHHHHHHHHHH_0_
+ 1	|___HHHHHHHHHHHHHHHHHHHHHHHHHHHHH___
     ---------------------------------------->
 
  The above elevation map is represented by
