@@ -21,7 +21,7 @@ package Misc;
  3	|	HHHHHHHHH 2 HHHHHHHHHHHH 2
  2	|	HHHHHHHHHHHHHHHHHHHHHHHHHHH 1
  1	|	HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
- 0  ---------------------------------------->
+ 0  |---------------------------------------->
 
  The above elevation map is represented by
  array [0,11,6,8,2,9,5,3,7,2,1,0].
