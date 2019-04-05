@@ -1,5 +1,7 @@
 package SlidingWindow;
 
+import java.util.LinkedList;
+
 /**
   Question : 239
 
@@ -28,4 +30,52 @@ package SlidingWindow;
 
 public class SlidingWindowMaximum {
 
+    public static void main(String args[]){
+        int[] inputArray = {1,3,-1,-3,5,3,6,7};
+        int windowSize = 3;
+        LinkedList<Integer> potentialMaxIndices = new LinkedList<>();
+        potentialMaxIndices.add(0);
+        for(int i=1;i<windowSize;i++){
+            while(!potentialMaxIndices.isEmpty() &&
+                    inputArray[i]>inputArray[potentialMaxIndices.getLast()]){
+                potentialMaxIndices.removeLast();
+            }
+            potentialMaxIndices.add(i);
+        }
+        System.out.println(inputArray[potentialMaxIndices.getFirst()]);
+        int len = inputArray.length;
+        for (int i=windowSize;i<len;i++){
+
+            /**
+             * remove elements (indexes) that are not part of the current window
+             */
+
+            while(!potentialMaxIndices.isEmpty() &&
+                    potentialMaxIndices.getFirst()< i-windowSize){
+                potentialMaxIndices.removeFirst();
+            }
+            /***
+             *
+             * remove all the elements (indexes) which are not potential max for current or future windows
+             */
+            while(!potentialMaxIndices.isEmpty() &&
+                    inputArray[potentialMaxIndices.getLast()] < inputArray[i]){
+                potentialMaxIndices.removeLast();
+            }
+            /***
+             *
+             * add the current element(index) if its potential max for current or future windows.
+             * NOTE : the add the current element even if its equal to the last element
+             * because it could be a potential max for window starting at that index.
+             */
+            if(potentialMaxIndices.isEmpty()||
+            inputArray[potentialMaxIndices.getLast()]>=inputArray[i]){
+                potentialMaxIndices.add(i);
+            }
+            /***
+             * print the current window max
+             */
+            System.out.println(inputArray[potentialMaxIndices.getFirst()]);
+        }
+    }
 }
