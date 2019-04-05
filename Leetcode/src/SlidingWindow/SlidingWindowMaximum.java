@@ -33,9 +33,16 @@ public class SlidingWindowMaximum {
     public static void main(String args[]){
         int[] inputArray = {1,3,-1,-3,5,3,6,7};
         int windowSize = 3;
+        //int[] inputArray = {1,-1};
+        //int windowSize = 1;
+        //int[] inputArray = {7,2,4};
+        //int windowSize = 2;
+
+        if(inputArray.length == 0){
+            return;
+        }
         LinkedList<Integer> potentialMaxIndices = new LinkedList<>();
-        potentialMaxIndices.add(0);
-        for(int i=1;i<windowSize;i++){
+        for(int i=0;i<windowSize;i++){
             while(!potentialMaxIndices.isEmpty() &&
                     inputArray[i]>inputArray[potentialMaxIndices.getLast()]){
                 potentialMaxIndices.removeLast();
@@ -51,7 +58,7 @@ public class SlidingWindowMaximum {
              */
 
             while(!potentialMaxIndices.isEmpty() &&
-                    potentialMaxIndices.getFirst()< i-windowSize){
+                    potentialMaxIndices.getFirst()<= i-windowSize){
                 potentialMaxIndices.removeFirst();
             }
             /***
