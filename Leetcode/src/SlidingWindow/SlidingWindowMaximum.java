@@ -78,7 +78,8 @@ public class SlidingWindowMaximum {
             if(potentialMaxIndices.isEmpty()||
             inputArray[potentialMaxIndices.getLast()]>=inputArray[i]){
                 potentialMaxIndices.add(i);
-            }
+            }*/
+            potentialMaxIndices.add(i);
             /***
              * print the current window max
              */
