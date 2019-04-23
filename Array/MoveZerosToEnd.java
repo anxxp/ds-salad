@@ -31,22 +31,21 @@ public class MoveZerosToEnd {
         ArrayUtility.printArray("OUTPUT",input);
     }
 
+
     public static void moveZerosToEnd(int[] input){
 
         int nextIndexToSwapZero=input.length-1;
         int currentIndex=0;
-        while(input[nextIndexToSwapZero] ==0 ){
-            nextIndexToSwapZero--;
-        }
+
         while(currentIndex < nextIndexToSwapZero ){
 
             if(input[currentIndex] == 0){
 
-                ArrayUtility.swap(input,currentIndex,nextIndexToSwapZero);
-
-                while(input[nextIndexToSwapZero] == 0){
+                while(input[nextIndexToSwapZero] == 0 && currentIndex < nextIndexToSwapZero ){
                     nextIndexToSwapZero--;
                 }
+                ArrayUtility.swap(input,currentIndex,nextIndexToSwapZero);
+
             }
             currentIndex++;
         }
