@@ -20,7 +20,6 @@ public class InOrderTraversalIterative {
 
         Node currentNode = root;
         Stack<Node> stack = new Stack<>();
-
         while(! stack.isEmpty() || currentNode != null){
 
             if(currentNode != null){
