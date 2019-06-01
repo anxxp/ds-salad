@@ -24,12 +24,12 @@ import java.util.List;
  */
 public class AllCombinationsOfBalancedParentheses {
     private static List<String> allBalancedCombinations = new ArrayList<>();
-    private static int numberOfPairs;
+    private static int desiredNumberOfPairs;
 
     public static void main(String args[]) {
 
-        numberOfPairs = 3;
-        char[] combinationStr = new char[2 * numberOfPairs];
+        desiredNumberOfPairs = 3;
+        char[] combinationStr = new char[2 * desiredNumberOfPairs];
         findAllCombinationOfBalancedParentheses(0, 0, combinationStr);
 
         for (String validCombination : allBalancedCombinations) {
@@ -43,20 +43,10 @@ public class AllCombinationsOfBalancedParentheses {
                                                                 int numOfClosingParentheses,
                                                                 char[] combinationStr) {
 
-        if (numOfOpeningParentheses == numberOfPairs &&
-                numOfClosingParentheses == numberOfPairs) {
+        if (numOfOpeningParentheses == desiredNumberOfPairs &&
+                numOfClosingParentheses == desiredNumberOfPairs) {
 
             allBalancedCombinations.add(new String(combinationStr));
-        }
-
-
-        if (numOfOpeningParentheses < numberOfPairs) {
-            combinationStr[numOfOpeningParentheses + numOfClosingParentheses] = '(';
-            findAllCombinationOfBalancedParentheses(
-                    numOfOpeningParentheses + 1,
-                    numOfClosingParentheses,
-                    combinationStr
-            );
         }
 
         if (numOfClosingParentheses < numOfOpeningParentheses) {
@@ -67,6 +57,16 @@ public class AllCombinationsOfBalancedParentheses {
                     combinationStr
             );
         }
+
+        if (numOfOpeningParentheses < desiredNumberOfPairs) {
+            combinationStr[numOfOpeningParentheses + numOfClosingParentheses] = '(';
+            findAllCombinationOfBalancedParentheses(
+                    numOfOpeningParentheses + 1,
+                    numOfClosingParentheses,
+                    combinationStr
+            );
+        }
+
     }
 
 

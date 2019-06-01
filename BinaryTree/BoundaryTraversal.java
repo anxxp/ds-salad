@@ -15,7 +15,7 @@ public class BoundaryTraversal {
         if(root == null){
             return;
         }
-        printLeftBoundary(root);
+        printLeftBoundaryIterative(root);
         printLeaves(root.left);
         printLeaves(root.right);
         printRightBoundary(root.right);
@@ -33,6 +33,24 @@ public class BoundaryTraversal {
             System.out.print(node.data+" ");
             printLeftBoundary(node.right);
         }
+    }
+
+    private static void printLeftBoundaryIterative(Node node) {
+
+        if(node==null){
+            return;
+        }
+
+        while(node.left != null || node.right !=null){
+
+            System.out.print(node.data+" ");
+            if(node.left != null){
+                node = node.left;
+            }else if(node.right !=null){
+               node = node.right;
+            }
+        }
+
     }
 
     private static void printLeaves(Node node) {
@@ -61,5 +79,22 @@ public class BoundaryTraversal {
             return;
         }
         System.out.print(node.data+" ");
+    }
+
+    private static void printRightBoundaryIterative(Node node) {
+        if(node==null){
+            return;
+        }
+
+        while(node.left != null || node.right !=null){
+
+            System.out.print(node.data+" ");
+            if(node.right !=null){
+                node = node.right;
+            }else if(node.left != null){
+                node = node.left;
+            }
+        }
+
     }
 }
