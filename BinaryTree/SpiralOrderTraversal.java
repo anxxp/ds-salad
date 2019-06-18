@@ -15,6 +15,7 @@ public class SpiralOrderTraversal {
         spiralOrderTraversal(root);
     }
 
+
     public static void spiralOrderTraversal(Node root){
 
         Stack<Node> oddStack = new Stack<>();

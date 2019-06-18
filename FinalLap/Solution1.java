@@ -10,7 +10,9 @@ public class Solution1 {
         allLocations.add(Arrays.asList(1,2));
         allLocations.add(Arrays.asList(3,4));
         allLocations.add(Arrays.asList(1,-1));
-        List<List<Integer>> answer = Solution1.closestLocations(3,allLocations,2);
+        allLocations.add(Arrays.asList(1,-1));
+        allLocations.add(Arrays.asList(1,-1));
+        List<List<Integer>> answer = Solution1.closestLocations(5,allLocations,4);
         System.out.println(answer);
     }
 
@@ -19,28 +21,7 @@ public class Solution1 {
                                          int truckCapacity){
 
 
-        class LocDistance implements Comparable{
-            Double distance;
-            Integer loc;
-
-            public LocDistance(Double distance, Integer loc) {
-                this.distance = distance;
-                this.loc = loc;
-            }
-
-            public void print(){
-                System.out.println(loc+" : "+distance);
-            }
-
-            @Override
-            public int compareTo(Object o) {
-                return (distance.compareTo(((LocDistance)o).distance));
-            }
-        }
-
         List<LocDistance> locDistances = new LinkedList<>();
-
-
         List<Integer> currLoc;
         Double distance;
 
@@ -73,5 +54,25 @@ public class Solution1 {
             locations.add(allLocations.get(locDistances.get(i).loc.intValue()));
         }
         return locations;
+    }
+}
+
+
+class LocDistance implements Comparable{
+    Double distance;
+    Integer loc;
+
+    public LocDistance(Double distance, Integer loc) {
+        this.distance = distance;
+        this.loc = loc;
+    }
+
+    public void print(){
+        System.out.println(loc+" : "+distance);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return (distance.compareTo(((LocDistance)o).distance));
     }
 }
